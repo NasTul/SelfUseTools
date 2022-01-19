@@ -1,0 +1,4 @@
+ffmpeg -hide_banner -i data.avi -ignore_loop 0 -i circle.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.5[logo];[0][logo]overlay=(W-w)/2:(H-h)/2:shortest=1"  out.mp4 -y
+
+
+ffmpeg -hide_banner -i data.avi -vf "movie=circle.gif:loop=0,setpts=N/FRAME_RATE/TB[out];[0:v][out]overlay=x=main_w-overlay_w:y=0" -shortest out.mp4 -y
