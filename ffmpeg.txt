@@ -1,4 +1,35 @@
-ffmpeg -hide_banner -i data.avi -ignore_loop 0 -i circle.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.5[logo];[0][logo]overlay=(W-w)/2:(H-h)/2:shortest=1"  out.mp4 -y
+ffmpeg -hide_banner -i data.avi -ignore_loop 0 -i dabai_ne2w.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.05[logo];[0][logo]overlay=(W-w)/2:(H-h)/2:shortest=1"  out.mp4 -y
+
+
+
+
+
 
 
 ffmpeg -hide_banner -i data.avi -vf "movie=circle.gif:loop=0,setpts=N/FRAME_RATE/TB[out];[0:v][out]overlay=x=main_w-overlay_w:y=0" -shortest out.mp4 -y
+
+
+
+ffmpeg -hide_banner -i data.avi -ignore_loop 0 -i dabai_ne2w.gif -i dabai_ne3w.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.1[logo];[0][logo]overlay=(W-w)/2.5:(H-h)/2.5:shortest=1;[2]overlay=(W-w)/1.5:(H-h)/1.5:shortest=1"  out.mp4 -y
+
+
+
+ffmpeg -hide_banner -i data.avi -ignore_loop 0 -i dabai_ne2w.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.01[logo];[0][logo]overlay=(W-w)/2.5:(H-h)/2.5:shortest=1"  out.mp4 -y
+
+
+ffmpeg -hide_banner -i out.mp4 -ignore_loop 0 -i dabai_ne3w.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.01[logo];[0][logo]overlay=(W-w)/1.5:(H-h)/2.5:shortest=1"  out1.mp4 -y
+
+
+ffmpeg -hide_banner -i out1.mp4 -ignore_loop 0 -i dabai_ne4w.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.01[logo];[0][logo]overlay=(W-w)/2:(H-h)/1.5:shortest=1"  out2.mp4 -y
+
+
+
+
+
+ffmpeg -hide_banner -i data.avi -ignore_loop 0 -i pics_1.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.02[logo];[0][logo]overlay=(W-w)/2.5:(H-h)/2.5:shortest=1"  out.mp4 -y
+
+
+ffmpeg -hide_banner -i out.mp4 -ignore_loop 0 -i pics_2.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.02[logo];[0][logo]overlay=(W-w)/1.5:(H-h)/2.5:shortest=1"  out1.mp4 -y
+
+
+ffmpeg -hide_banner -i out1.mp4 -ignore_loop 0 -i pics_3.gif -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.02[logo];[0][logo]overlay=(W-w)/2:(H-h)/1.5:shortest=1"  out2.mp4 -y
