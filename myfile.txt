@@ -1,0 +1,112 @@
+What are the differences between Discretionary Access Control (DAC) and Mandatory Access Control (MAC).:
+
+DAC has users and groups, permissions set by users for their files, users grant sharing permissions to other users on the same system.
+MAC has subjects, objects and permissions set by a central policy administrator. Policy rules govern sharing of information.
+---DAC has users, groups and permissions while MAC has subjects, objects and permissions. MAC controls permissions from a central policy administrator while DAC allows users to set permissions on their own files.
+
+
+
+The Bell-La Padula access control  model provides confidentiality by ensuring what?:
+
+---Users can only view data with a security level equal to or lower and can only write data with a security level equal to or higher than their own.
+Users can only view data with a security level equal to or higher and can only write data with a security level equal to or lower than their own.
+Users must ask permission from their manager to view and write any data.
+
+
+
+Which access control model prevents conflicts of interests by categorising resources into conflict of interest classes and ensuring users can only access resources from one conflict of interest class.:
+
+---Brewer and Nash Model
+Biba model
+Low Watermark Model
+Clark-Wilson Model
+
+
+
+You are a security researcher and find a bug in a piece of software and write a proof of concept to demonstrate how the bug can be exploited. How do you responsibly disclose the vulnerability?:
+
+---You provide details of the bug, steps to exploit it and suggested fixes to the software vendor allowing a patch to be issued before publicising the details.
+You upload your exploit proof of concept code to your GitHub profile with a detailed explanation of how to use it.
+
+
+
+What policies should be adopted to securely administer a network of computers?:
+
+---Least privilege access control
+---Enforce strong passwords
+---Use well known and well tested cryptographic libraries
+---Patch systems
+
+
+
+What strategies could a network admin take to minimise the attack surface of their network?:
+
+---Segment networks with internal firewalls, DMZ for internet facing machines and isolate machines that don't need internet access
+Block access to domains that are known to host malware.
+---Monitor and filter communications by MAC address
+---Implement spam mitigation
+
+
+
+You are a security researcher and have been asked to conduct a penetration test, what should you do first?:
+
+---Get written agreement from the customer.
+Take detailed notes of the information discovered and techniques you used.
+Use ping sweeping to enumerate all hosts on the network.
+Fingerprint the network to determine what operating systems are in use.
+Use known vulnerabilities to gain access to internal resources.
+
+
+
+Kerberos is a protocol and software suit that _______?:
+
+---authenticates users to a  service.
+---authenticates services to users
+confirms authenticity of data
+ensures availability of users and services.
+
+
+
+Windows BitLocker encrypts a computers boot volume?:
+
+---False
+True
+
+
+
+Windows EFS, Truecryps, Bit Locker and Free Compusec are all types of what?:
+
+---Secure storage
+Encryption schemes
+Trusted Platform Modules
+Penetration testing platforms
+
+
+
+What makes BitLocker, TrueCrypt and Free CompuSec vulnerable to cold boot attacks?:
+
+---They all load encryption keys into memory as plain text during operation which can be read by an attacker with physical access.
+They all store a copy of the password on the unencrypted part of the disk for comparison when a user logs in which can be read by an attacker with physical access.
+They all check the correct password has been entered by sending the plain text input by the user over the internet.
+
+
+
+What is sqlmap?:
+
+A database management system.
+---A tool that automates testing for SQL injection flaws.
+An application for developers to test how long a database query takes to run.
+An application to map all databases connected to the internet.
+
+
+
+Which is true of the following sqlmap command:
+sudo sqlmap -u "http://www.control.com:88/cdcol/search_action.php?title=&year=1991" --dbms=MySQL --threads=9 -D cdcol -p year -T userinfo -C creditcard --dump:
+
+The database name is userinfo.
+The table name is creditcard.
+---Information contained in the creditcard column will be dumped.
+Information contained in the cdcol column will be dumped.
+
+
+
