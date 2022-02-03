@@ -2,6 +2,7 @@ ffmpeg -hide_banner -i data.avi -ignore_loop 0 -i dabai_ne2w.gif -filter_complex
 
 
 
+ffmpeg -f concat -safe 0 -i filelist.txt -y output.mp4
 
 
 
